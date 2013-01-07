@@ -10,7 +10,7 @@ Setup
 ````
 wget -O - https://raw.github.com/jtgiri/amazon-ami-chef-server/master/install.sh | bash
 ````
-Test
+Note
 ----
 
 In theory this should work fine on Centos as well, but I haven't tested it. 
