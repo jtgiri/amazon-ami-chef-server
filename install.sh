@@ -9,7 +9,7 @@ gem install chef
 sudo mkdir /etc/chef/
 cat << EOF >> /etc/chef/solo.rb 
 file_cache_path "/tmp/chef-solo"
-cookbook_path "/tmp/chef-solo/amazon-ami-chef-server-master/amazon-ami-chef-server-master/cookbooks/"
+cookbook_path "/tmp/chef-solo/cookbooks/"
 EOF
 cat << EOF >> ~/chef.json
 {
