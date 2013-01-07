@@ -22,4 +22,4 @@ cat << EOF >> ~/chef.json
 EOF
 wget -O - https://github.com/jtgiri/amazon-ami-chef-server/archive/master.tar.gz | tar -xzv
 mv amazon-ami-chef-server-master/cookbooks /tmp/chef-solo/cookbooks
-sudo chef-solo -c /etc/chef/solo.rb
+sudo chef-solo  -j ~/chef.json
