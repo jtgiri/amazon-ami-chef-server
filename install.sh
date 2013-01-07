@@ -20,4 +20,6 @@ cat << EOF >> ~/chef.json
   "run_list": [ "recipe[chef-server::rubygems-install]" ]
 }
 EOF
-sudo chef-solo -c /etc/chef/solo.rb -j ~/chef.json -r https://github.com/jtgiri/amazon-ami-chef-server/archive/master.tar.gz
+wget -O - https://github.com/jtgiri/amazon-ami-chef-server/archive/master.tar.gz | tar -xzv
+mv amazon-ami-chef-server-master/cookbooks /tmp/chef-solo/cookbooks
+sudo chef-solo -c /etc/chef/solo.rb
