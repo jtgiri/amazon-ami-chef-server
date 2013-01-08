@@ -24,3 +24,6 @@ wget -O - https://github.com/jtgiri/amazon-ami-chef-server/archive/master.tar.gz
 mkdir -p /tmp/chef-solo
 mv amazon-ami-chef-server-master/cookbooks /tmp/chef-solo/cookbooks
 sudo chef-solo  -j ~/chef.json
+echo "/usr/local/lib" >> /etc/ld.so.conf
+ldconfig
+/etc/init.d/chef-server restart
