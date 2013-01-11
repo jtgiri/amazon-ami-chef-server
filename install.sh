@@ -7,11 +7,11 @@ cd rubygems-1.8.10
 ruby setup.rb --no-format-executable
 gem install chef
 sudo mkdir /etc/chef/
-cat << EOF >> /etc/chef/solo.rb 
+cat << EOF > /etc/chef/solo.rb 
 file_cache_path "/tmp/chef-solo"
 cookbook_path "/tmp/chef-solo/cookbooks/"
 EOF
-cat << EOF >> ~/chef.json
+cat << EOF > ~/chef.json
 {
   "chef_server": {
     "server_url": "http://localhost:4000",
