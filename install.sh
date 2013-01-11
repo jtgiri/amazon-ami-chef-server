@@ -23,7 +23,7 @@ EOF
 wget -O - https://github.com/jtgiri/amazon-ami-chef-server/archive/master.tar.gz | tar -xzv
 mkdir -p /tmp/chef-solo
 mv amazon-ami-chef-server-master/cookbooks /tmp/chef-solo/cookbooks
-sudo chef-solo  -j ~/chef.json
+/usr/bin/chef-solo  -j ~/chef.json
 echo "/usr/local/lib" >> /etc/ld.so.conf
 ldconfig
 for service in  chef-server server-webui chef-solr chef-expander couchdb ; do service $service restart ; done
