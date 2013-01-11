@@ -6,7 +6,7 @@ tar zxf rubygems-1.8.10.tgz
 cd rubygems-1.8.10
 ruby setup.rb --no-format-executable
 gem install chef
-sudo mkdir /etc/chef/
+mkdir /etc/chef/
 cat << EOF > /etc/chef/solo.rb 
 file_cache_path "/tmp/chef-solo"
 cookbook_path "/tmp/chef-solo/cookbooks/"
